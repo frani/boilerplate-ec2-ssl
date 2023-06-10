@@ -1,0 +1,8 @@
+  ingress {
+    description      = "TLS from VPC"
+    from_port        = 443
+    to_port          = 443
+    protocol         = "tcp"
+    cidr_blocks      = [var.vpc_cidr]
+    ipv6_cidr_blocks = ["::/0"]
+  }
